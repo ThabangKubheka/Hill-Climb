@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2mate.com - MONEY SOUND EFFECT  (1).mp3-31afd70d7c0fd417eb3df7f96522305f.mp3str"
+
+[deps]
+
+source_file="res://Audio/y2mate.com - MONEY SOUND EFFECT  (1).mp3"
+dest_files=[ "res://.import/y2mate.com - MONEY SOUND EFFECT  (1).mp3-31afd70d7c0fd417eb3df7f96522305f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

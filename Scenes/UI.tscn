@@ -1,0 +1,190 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Images/Pickups/Coin5.png" type="Texture" id=1]
+[ext_resource path="res://Images/Pickups/fredoka-one.one-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/Pickups/Fuel.png" type="Texture" id=3]
+[ext_resource path="res://Images/Other/Alarm.png" type="Texture" id=4]
+[ext_resource path="res://Images/Pickups/bb.png" type="Texture" id=5]
+[ext_resource path="res://Images/Other/skull.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 3
+outline_color = Color( 0.0431373, 0.0313726, 0.0313726, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.145098, 0.905882, 0.0862745, 1 )
+border_width_top = 6
+border_color = Color( 0.882353, 0.882353, 0.882353, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.596078, 0.596078, 0.596078, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.109804, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+expand_margin_top = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "alarm"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 0.9 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Idle"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Death:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "alarm"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Death:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 0.9 )
+}
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Coin" type="TextureRect" parent="."]
+margin_left = 40.0
+margin_top = 180.0
+margin_right = 181.0
+margin_bottom = 333.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="Coin"]
+margin_left = 229.0
+margin_top = 70.0
+margin_right = 269.0
+margin_bottom = 149.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="Bucks" type="TextureRect" parent="."]
+margin_left = 49.0
+margin_top = 371.0
+margin_right = 190.0
+margin_bottom = 524.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="Bucks"]
+margin_left = 229.0
+margin_top = 70.0
+margin_right = 269.0
+margin_bottom = 149.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="Fuel" type="TextureRect" parent="."]
+margin_left = 61.0
+margin_top = 53.0
+margin_right = 150.0
+margin_bottom = 159.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Fuel"]
+margin_left = 164.0
+margin_top = 35.0
+margin_right = 663.0
+margin_bottom = 92.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+value = 50.0
+percent_visible = false
+
+[node name="Alarm" type="TextureRect" parent="Fuel"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 698.0
+margin_top = 30.0
+margin_right = 766.0
+margin_bottom = 99.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fuel"]
+anims/Idle = SubResource( 4 )
+anims/alarm = SubResource( 5 )
+
+[node name="Death" type="TextureRect" parent="."]
+margin_left = 61.0
+margin_top = 53.0
+margin_right = 150.0
+margin_bottom = 159.0
+expand = true
+
+[node name="Death" type="TextureRect" parent="Death"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 983.0
+margin_top = 37.0
+margin_right = 1051.0
+margin_bottom = 106.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="DeathPlayer" type="AnimationPlayer" parent="Death"]
+anims/Idle = SubResource( 6 )
+anims/alarm = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Death"]
+margin_left = 1069.0
+margin_top = 58.0
+margin_right = 1109.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 8 )
