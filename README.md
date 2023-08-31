@@ -1,79 +1,55 @@
-SmartShape2D
----
-![Sample Image]( ./addons/rmsmartshape/documentation/imgs/sample.png )
-![Sample Gif]( ./addons/rmsmartshape/documentation/imgs/sample.gif )
+# Hill Climbing Game
 
-# About
-**This is the GODOT 3 version of this plugin.
-If you're looking for the GODOT 4 version, please go [here](https://github.com/SirRamEsq/SmartShape2D)**
+![Gameplay Screenshot](screenshot.png)
+![Gameplay Screenshot](screenshot.png)
 
-This plugin allows you to create nicely textured 2D polys.
-Simply place a few points then create / assign the shape material and you should have a good looking polygon.
+Welcome to the Hill Climbing Game! This is a fun and challenging game where you control a vehicle and try to climb various hills and terrains. Your goal is to reach the highest point possible while maintaining control over your vehicle and most importantly collect all those nice bucks.
 
-The textures used are similar to what you would use if making terrain using TileMaps/TileSets
+## Gameplay
 
-**If you find any issues, by all means let us know.
-Read the section below on Contributing and post an issue if one doesn't already exist**
+- Use the **Up Arrow** key to accelerate your vehicle uphill.
+- Use the **Down Arrow** key to brake and slow down.
+- Collect coins and power-ups scattered throughout the levels to boost your score and performance.
+- Be cautious of steep slopes and obstacles that could flip your vehicle.
 
-**If you enjoy this tool and want to support its development, [I'd appreciate a coffee ](https://www.buymeacoffee.com/SirRamESQ) :)**
-<a href="https://www.buymeacoffee.com/SirRamESQ">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" align="left" height="48">
-</a>
+## Features
 
-# Support
-- Supported and Tested on Godot 3.x
+- Realistic physics simulation for a challenging and engaging gameplay experience.
+- Multiple levels with increasing difficulty, each featuring unique landscapes and obstacles.
+- Dynamic lighting and visual effects that enhance the overall gaming atmosphere.
+- Score tracking and display, so you can keep track of your best performances.
+- Intuitive controls that allow players of all ages to enjoy the game.
 
-# Demo
-A Sample Godot 3 Project using SmartShape2D can be found here:
-https://github.com/SirRamEsq/SmartShape2D-DemoProject/tree/Godot3-latest
+## Installation
 
-# Documentation
-- [How To Install]( ./addons/rmsmartshape/documentation/Install.md )
-- [Quick Start]( ./addons/rmsmartshape/documentation/Quickstart.md )
-- [Migrating from 1.x]( ./addons/rmsmartshape/documentation/Migration.md )
-- [Shapes]( ./addons/rmsmartshape/documentation/Shapes.md )
-- [Toolbar]( ./addons/rmsmartshape/documentation/Toolbar.md )
-- [Resources]( ./addons/rmsmartshape/documentation/Resources.md )
-- [Normals]( ./addons/rmsmartshape/documentation/Normals.md )
-- [Controls and Hotkeys]( ./addons/rmsmartshape/documentation/Controls.md )
-- [FAQ]( ./addons/rmsmartshape/documentation/FAQ.md )
-- [Version History]( ./addons/rmsmartshape/documentation/VersionHistory.md )
-
-# Video tutorials
-SmartShape2D + Aseprite tutorial can be found here (Thanks Picster!):
-
-[![VideoTutorial](https://img.youtube.com/vi/r-pd2yuNPvA/0.jpg)](http://www.youtube.com/watch?v=r-pd2yuNPvA)
-
-SmartShape2D tutorial can be found here (Thanks LucyLavend!):
-
-[![VideoTutorial](https://img.youtube.com/vi/45PldDNCQhw/0.jpg)](https://www.youtube.com/watch?v=45PldDNCQhw)
-
-
-# Contibuting
-## Issues
-If you have any suggestions or find any bugs, feel free to add an issue.
-
-Please include the following three bits of information in each issue posted:
-- Bug / Suggestion
-- Godot Version
-- SmartShape2D Version
-
-Some Guidelines for Issues:
-- Attaching a sample project where the issue exists is the fastest way for us to see what's going on
-- Try to be as descriptive as possible
-- Pictures and screenshots will also be very helpful
-
-Issues can be added [here](https://github.com/SirRamEsq/SmartShape2D/issues)
+1. Clone or download this repository.
+2. Open the Godot game engine.
+3. Click on "Import" and select the root folder of this repository.
+4. Open the main scene located in the Scenes folder.
+5. Press the play button in the top-right corner of the Godot editor to start the game.
 
 ## Development
-We have a set of tests we run against the code (courtesy of [GUT](https://github.com/bitwes/Gut)).
-If making a merge request, please ensure that the tests pass. If the tests have been updated appropriately to pass, please note this in the merge request.
 
-## Discord
-We have a Discord server for the plugin. https://discord.gg/mHWDPBD3vu
+The game was developed using the Godot game engine. You can modify and customize the game by following these steps:
 
-Here, you can:
-- Ask for help
-- Showcase your project
-- Speak with the developers directly
+1. Open the Godot game engine.
+2. Load the project by clicking on "Import" and selecting the root folder.
+3. Edit scenes, scripts, assets, and settings as needed.
+4. Experiment with various physics parameters to adjust the difficulty and feel of the game.
 
+## Credits
+
+- Game developed by [ClueLess]
+- Music by [Youtube/Free-Samples]
+- Sound effects obtained from [Youtube/Free-Samples]
+- Art assets created by [Free-Samples]
+
+## Feedback and Issues
+
+If you encounter any issues or have suggestions for improvements, please feel free to open an issue in this repository. Your feedback is valuable and will help make the game even better!
+
+## License
+
+This game is released under the [MIT License](LICENSE). You are free to use and modify the game for your purposes.
+
+Enjoy playing the Hill Climbing Game!
