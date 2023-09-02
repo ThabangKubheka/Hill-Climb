@@ -2,7 +2,9 @@ extends Node2D
 
 var coins_collected = 0
 var bb_collected = 0
-var cause_of_death ="BROKEN NECK - EVEN IN A GAME, YOU CAN'T DRIVE "
+var cause_of_death ="BROKEN NECK  "
+var win = "YOU WIN"
+		
 
 func add_coins(amount):
 	coins_collected += amount
@@ -11,6 +13,10 @@ func add_coins(amount):
 func add_bb(amount):
 	bb_collected += amount
 	$UI/Bucks/Label.text = str(bb_collected)
+	
+func finish():
+	$GameOver.stop()
+	$UI/Death/Label.text = str(win)
 	
 
 func update_fuel_UI(value):

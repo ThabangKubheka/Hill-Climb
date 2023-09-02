@@ -7,6 +7,7 @@ var fuel = 100
 var dead =false 
 var driving = 0
 
+
 func _ready():
 	wheels = get_tree().get_nodes_in_group("wheel")
 	get_parent().update_fuel_UI(fuel)
@@ -14,6 +15,9 @@ func _ready():
 func _physics_process(delta):
 	
 	driving =0
+	
+	
+		
 	
 	if fuel > 0 && !dead:
 		$GameOver.stop()
@@ -49,17 +53,23 @@ func _physics_process(delta):
 		use_fuel(delta)
 	else:
 		$Engine.pitch_scale = lerp($Engine.pitch_scale,1, 2 * delta)
-
 		
+
+
+func checkered_flag():
+	get_parent().finish()
+	
 func death():
 	get_parent().call_death()	
 				
 func refuel():
 	fuel=100
 	get_parent().update_fuel_UI(fuel)
+
+
 	
 func use_fuel(delta):
-	fuel -=30*delta
+	fuel -=10*delta
 	fuel = clamp(fuel,0,100)
 	get_parent().update_fuel_UI(fuel)
 	
@@ -67,3 +77,5 @@ func use_fuel(delta):
 
 func _on_GameOver_timeout():
 	get_tree().reload_current_scene()
+	
+

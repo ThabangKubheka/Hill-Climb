@@ -44,7 +44,7 @@ texture = ExtResource( 2 )
 polygon = PoolVector2Array( -226, -46, -226, 101, -226, 101, 224, 101, 224, 101, 224, 101, 221, -15, 220, -16, 43, -82, 39, -85, -231, -90, -230, -90 )
 
 [node name="GameOver" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 one_shot = true
 
 [node name="Head" type="RigidBody2D" parent="." groups=["player"]]
@@ -73,5 +73,7 @@ stream = ExtResource( 7 )
 autoplay = true
 
 [node name="MovingEngine" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="timeout" from="GameOver" to="." method="_on_GameOver_timeout"]

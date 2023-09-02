@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/Pickups/fredoka-one.one-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Code/Menu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 68
+font_data = ExtResource( 1 )
+
+[node name="HowToPlay" type="ColorRect"]
+margin_right = 2099.0
+margin_bottom = 1122.0
+color = Color( 0.117647, 0.596078, 0.67451, 1 )
+
+[node name="HowToPlay" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 793.0
+margin_top = 34.0
+margin_right = 1121.0
+margin_bottom = 113.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_right = 328.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
+text = "GamePlay:"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_left = 80.0
+margin_top = 156.0
+margin_right = 1836.0
+margin_bottom = 235.0
+
+[node name="Label" type="Label" parent="CenterContainer2"]
+margin_right = 1756.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
+text = "* Use the Up Arrow key to accelerate your vehicle uphill."
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+margin_left = 185.0
+margin_top = 283.0
+margin_right = 1755.0
+margin_bottom = 362.0
+
+[node name="Label" type="Label" parent="CenterContainer3"]
+margin_right = 1570.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
+text = "* Use the Down Arrow key to brake and slow down."
+
+[node name="CenterContainer4" type="CenterContainer" parent="."]
+margin_left = 211.0
+margin_top = 413.0
+margin_right = 1670.0
+margin_bottom = 492.0
+
+[node name="Label" type="Label" parent="CenterContainer4"]
+margin_right = 1459.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
+text = "* Collect bucks scattered throughout the level."
+
+[node name="CenterContainer5" type="CenterContainer" parent="."]
+margin_left = -124.0
+margin_top = 532.0
+margin_right = 2028.0
+margin_bottom = 693.0
+
+[node name="Label" type="Label" parent="CenterContainer5"]
+margin_left = 411.0
+margin_right = 1740.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 1 )
+text = "* Be cautious of steep slopes and obstacles
+ that could flip your vehicle."
+
+[node name="CenterContainer6" type="CenterContainer" parent="."]
+modulate = Color( 0.878431, 0.113725, 0.113725, 1 )
+margin_left = 95.0
+margin_top = 684.0
+margin_right = 1860.0
+margin_bottom = 927.0
+
+[node name="Label" type="Label" parent="CenterContainer6"]
+margin_top = 41.0
+margin_right = 1765.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 1 )
+text = "* Warning: Rapid acceleration can cause severe whiplash.
+ Drive carefully."
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 826.0
+margin_top = 962.0
+margin_right = 1172.0
+margin_bottom = 1052.0
+custom_fonts/font = SubResource( 2 )
+text = "Menu"
+script = ExtResource( 2 )
